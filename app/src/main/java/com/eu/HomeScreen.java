@@ -8,6 +8,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
@@ -18,6 +19,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.eu.entitiy.HomeItem;
+import com.eu.entitiy.Post;
+import com.google.gson.Gson;
 
 import java.util.List;
 
@@ -40,6 +43,7 @@ public class HomeScreen extends AppCompatActivity {
         // Make sure the toolbar exists in the activity and is not null
         setSupportActionBar(toolbar);
 
+
         initViews();
         setUpData();
     }
@@ -47,6 +51,13 @@ public class HomeScreen extends AppCompatActivity {
     private void setUpData() {
         mAdapter = new HomeAdapter();
         mRvMainMenu.setAdapter(mAdapter);
+
+        Post post = new Post();
+        post.setData();
+
+        Gson gson = new Gson();
+
+        Log.i("Json is", gson.toJson(post));
     }
 
     private void initViews() {
@@ -80,7 +91,7 @@ public class HomeScreen extends AppCompatActivity {
 
         private List<HomeItem> mListItems;
         private String[] arrItems = {"Questions", "Quiz", "Algorithms", "Puzzles", "Score"};
-        private String[] arrColors = {"#E9811A", "#EC8184","#8CC264", "#E7BE3A",
+        private String[] arrColors = {"#E9811A", "#EC8184", "#8CC264", "#E7BE3A",
                 "#5CA1F1"};
         private int lastPosition = -1;
 
