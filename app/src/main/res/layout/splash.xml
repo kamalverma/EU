@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="#303f9f"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        card_view:cardCornerRadius="8dp"
+        android:elevation="12dp"
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:background="#ff5252"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/iv_school"
+                android:layout_margin="5dp"
+                android:src="@drawable/ic_school_48dp"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/iv_school"
+                android:id="@+id/iv_read"
+                android:layout_margin="5dp"
+                android:src="@drawable/ic_school_48dp"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_school"
+                android:id="@+id/iv_share"
+                android:layout_margin="5dp"
+                android:src="@drawable/ic_school_48dp"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/iv_share"
+                android:layout_below="@id/iv_school"
+                android:id="@+id/iv_4"
+                android:layout_margin="5dp"
+                android:src="@drawable/ic_school_48dp"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

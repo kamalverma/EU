@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">EU</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_invite">Invite Friends</string>
+    <string name="action_adfree">Go Ads Free</string>
+    <string name="action_rateus">Rate Us</string>
+    <string name="action_donate">Donate</string>
+    <string name="action_feedback">Feedback</string>
+</resources>
